@@ -1,0 +1,368 @@
+/*
+ Theme Name:   CNT Theme
+ Theme URI:    http://staa.cnt-so.fr
+ Description:  CNT Theme
+ Author:       Michael
+ Author URI:   https://maz-dev.cc
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  CNT Theme
+*/
+
+/* Overrides */
+body {
+  font-size: 1.6rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-container {
+  max-width: 1024px;
+  min-height: 220px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide .title {
+  z-index: 100;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.swiper-slide .title a h1 {
+  font-size: 1em !important;
+  color: #fff;
+  text-shadow: #000 1px 0 5px;
+}
+
+.swiper-button-prev {
+  color: #cd262e;
+}
+.swiper-button-next {
+  color: #cd262e;
+}
+.featured-media-inner img {
+  max-width: 650px;
+}
+
+.post-author.meta-wrapper {
+  display: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+#site-header {
+  border-bottom: 10px solid #000;
+}
+.header-inner {
+  text-align: center;
+  padding: 1.5rem;
+}
+.primary-menu-wrapper {
+  margin: auto;
+  text-align: center;
+}
+.primary-menu {
+  margin: auto;
+}
+.slider-wrapper {
+  width: 100%;
+  text-align: center;
+}
+[aria-label="Slider"] {
+  margin: auto;
+  max-width: 1200px;
+}
+/*
+** HOME
+*/
+#home {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.manchette {
+  background-color: #fff;
+  margin-top: 30px;
+  border: 2px solid rgb(235, 235, 235);
+}
+
+.manchette img {
+}
+
+.manchette a h1 {
+  padding-left: 50px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #000;
+}
+
+.manchette-text > p {
+  font-size: 0.9em;
+}
+.manchette > a {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 0.7em;
+}
+.manchette-text {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.manchette-text > i {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+.manchette-text i svg {
+  color: #000;
+  float: left;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.manchette-text p {
+  margin-top: 10px;
+}
+
+#posts-home {
+  margin-top: 25px;
+}
+.post-home {
+  background-color: #fff;
+  border: 2px solid rgb(235, 235, 235);
+}
+
+.posts-home-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts-home-thumbnail > img {
+  object-fit: cover;
+  padding: 10px;
+  max-height: 200px;
+}
+
+.posts-home-content {
+  padding: 20px;
+}
+
+.posts-home-content > a {
+  text-decoration: none;
+}
+
+.posts-home-content > a > h1 {
+  font-size: 1.3em;
+}
+
+.posts-home-content > p {
+  font-size: 0.8em;
+}
+.posts-home-content > i {
+  font-size: 0.8em;
+}
+
+.posts-home-content > i > svg {
+  color: #000;
+  float: left;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/*
+** SIDEBAR
+*/
+#sidebar {
+  text-align: center;
+}
+
+#sidebar-contact {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#sidebar-contact button {
+  -moz-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -webkit-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -o-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  box-shadow: 0px 2px 5px 0px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=5);
+}
+#sidebar-campagne {
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: #fff;
+  -moz-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -webkit-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -o-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  box-shadow: 0px 2px 5px 0px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=5);
+}
+#sidebar-campagne h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #000;
+  color: #fff;
+}
+
+#sidebar-campagne-list {
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar-campagne-list li > a {
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar-campagne-list > li > p {
+  font-size: 0.8em;
+  color: #4d4d4d;
+}
+
+.syndicats-sidebar {
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: #fff;
+  -moz-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -webkit-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -o-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  box-shadow: 0px 2px 5px 0px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=5);
+}
+
+.syndicats-sidebar h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #000;
+  color: #fff;
+}
+.syndicats-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#menu-syndicats li > a {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+}
+
+#menu-syndicats > li > a > p {
+  font-size: 0.6em;
+  color: #4d4d4d;
+}
+
+.swiper-slide .title {
+  padding: 15px;
+}
+.swiper-slide .title a h1 {
+  font-size: 2.2em !important;
+}
+
+#sidebar > div > button > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sidebar hr {
+  margin: 3rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2em !important;
+    margin: 0.2em !important;
+  }
+  .header-toggles {
+    display: none;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: -3rem;
+  }
+  .swiper-container {
+    max-width: 1024px;
+    height: 500px;
+  }
+
+  #home {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 2rem auto 3rem;
+  }
+
+  #sidebar {
+    text-align: center;
+    margin-right: 15px;
+  }
+
+  .manchettes-zone {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .manchette {
+    text-align: center;
+    margin: 10px;
+  }
+  .manchette a h1 {
+    padding-left: 0px;
+  }
+  .manchette-thumbnail {
+    width: 100%;
+  }
+  .manchette-thumbnail img {
+    object-fit: cover;
+    height: 245px;
+  }
+
+  .post-home {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+}
