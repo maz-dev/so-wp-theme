@@ -1,14 +1,38 @@
 <?php
-$args          = array(
-	'post_type'        => 'post',
-	'post_status'      => 'publish',
-	'posts_per_page'   => 10,
-	'orderby'          => 'post_date',
-	'order'            => 'DESC',
-	'offset'           => 2,
-	'suppress_filters' => true,
-);
-$wpb_all_query = new WP_Query( $args ); ?>
+$page    = get_query_var( 'page' );
+$page_ID = get_the_ID();
+
+if(get_query_var( 'page' )) {
+	$args          = array(
+		'post_type'        => 'post',
+		'post_status'      => 'publish',
+		'posts_per_page'   => 10,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'suppress_filters' => true,
+		'paged' =>  ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
+	);
+} else {
+	$args          = array(
+		'post_type'        => 'post',
+		'post_status'      => 'publish',
+		'posts_per_page'   => 10,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'offset'					 => 2,
+		'suppress_filters' => true,
+		'paged' =>  ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
+	);
+}
+
+
+if ( is_front_page() )
+	$args['paged'] = $page;
+	
+
+	
+$wpb_all_query = new WP_Query( $args );
+?>
 
 <?php if ( $wpb_all_query->have_posts() ) : ?>
 
@@ -54,11 +78,22 @@ $wpb_all_query = new WP_Query( $args ); ?>
 			  </div> 
 		</div>    
 		<?php endwhile; ?>
-	  <!-- end of the loop -->
-</div>
-	<?php wp_reset_postdata(); ?>
+		<!-- end of the loop -->
+		
+		<?php 
+		$big = 999999999; 
+		$GLOBALS['wp_query'] = $wpb_all_query;
+		the_posts_pagination( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '/page/%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wpb_all_query->max_num_pages
+	) );
+		?>
 
-<?php else : ?>
+</div>
+	<?php wp_reset_postdata(); wp_reset_query();?>
+	<?php else : ?>
 	<p><?php _e( 'Aucun contenu disponible' ); ?></p>
 	<?php
 endif; ?>

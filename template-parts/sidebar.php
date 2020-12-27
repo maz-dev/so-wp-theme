@@ -2,7 +2,7 @@
 
 
   <div id="sidebar-contact">
-		<button><a href="/contact">Contact / Se syndiquer</a></button>
+		<button><a href="/contact">Nous contacter / Se syndiquer</a></button>
   </div>
 
 	<hr />
