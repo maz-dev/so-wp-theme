@@ -19,7 +19,6 @@ if(get_query_var( 'page' )) {
 		'posts_per_page'   => 10,
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
-		'offset'					 => 2,
 		'suppress_filters' => true,
 		'paged' =>  ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
 	);
