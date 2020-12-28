@@ -17,12 +17,12 @@
 			$the_query = new WP_Query( $args_campagne );
 		if ( $the_query->have_posts() ) :
 			?>
-		<ul id="sidebar-campagne-list">
+		<div id="sidebar-campagne-list">
 			<?php
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post();
 				?>
-			<li>
+			<div>
 				<?php 
 					$value = get_field( "vignette" );
 					if($value) {
@@ -36,9 +36,9 @@
 					}		
 				?>
 				</a>
-			</li>
+				</div>
 			<?php endwhile; ?>
-		</ul>
+				</div>
 			<?php wp_reset_postdata(); ?>
 
 		<?php else : ?>
