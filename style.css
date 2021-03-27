@@ -227,6 +227,35 @@ h1 {
   box-shadow: 0px 2px 5px 0px #cfcfcf;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=5);
 }
+.syndicat-contact {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.syndicat-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+}
+.syndicat-contact li {
+  background-color: #f8242f;
+  margin-left: -5px;
+  width: 100%;
+  padding: 1.1em 1.44em;
+  font-weight: 600;
+  -moz-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -webkit-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  -o-box-shadow: 0px 2px 5px 0px #cfcfcf;
+  box-shadow: 0px 2px 5px 0px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=180, Strength=5);
+}
+.syndicat-contact li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 #sidebar-campagne {
   text-align: center;
   padding-bottom: 10px;
